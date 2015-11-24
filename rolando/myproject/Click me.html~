@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+<h4>Created by Rolando D. Cabalihin</h4>
+
+<button type="button" onclick="start()" id = "button">Start game</button>
+
+<button type="button" onclick="dis()" id = "button1" >Click me</button>
+
+<p id="demo">Score: 0</p>
+
+<button type="button" onclick="restart()" id = "button2">Reset</button>
+
+<button type="button" onclick="display1()" id = "button3">HighScore</button>
+
+
+<script>
+
+var highScore = 0;
+var i = 1;
+var totalScore = 0;
+
+//disable some button
+document.getElementById("button1").style.display = "none"; 
+document.getElementById("button2").style.display = "none";
+
+function start(){
+ setTimeout(display,5000); // time limit 
+ document.getElementById("button").style.display = "none";
+ document.getElementById("button1").style.display = "block";
+ document.getElementById("button2").style.display = "block";  
+
+}
+
+function dis (){ //score counter
+   document.getElementById('demo').innerHTML = "Score: "+i++;
+   totalScore= i -1;
+}
+
+function display(){    // display totalScore and highScore
+if (highScore < totalScore)
+{
+   highScore  = totalScore;
+   window.alert("Total Click: "+totalScore+" High Score: "+highScore+"\nAwesome!!");
+}
+else {
+   window.alert("Total Click: "+totalScore+" High Score: "+highScore);
+}
+   document.getElementById("button1").style.display = "none";
+}
+
+function display1(){
+if(highScore != 0){
+   window.alert("Current High Score: "+highScore);
+}
+else
+   window.alert("Theirs no current High Score.... For now");
+}
+
+function restart(){
+ i = 1;
+ document.getElementById("button").style.display = "block";
+ document.getElementById("button1").style.display = "none";
+ document.getElementById("button2").style.display = "none";
+ document.getElementById('demo').innerHTML = "Score: " +(i-1);
+
+}
+</script>
+
+
+</body>
+</html> 
+

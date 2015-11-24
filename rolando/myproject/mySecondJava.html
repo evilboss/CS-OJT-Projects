@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+<label> Input First Name here :</label>
+<input type="text" id="firstName"> </input></br>
+
+<label> Input Last Name here :</label>
+<input type="text" id="lastName"> </input></br>
+
+<label> Input Age here :</label></t>
+<input type="text" id="age"></input> </br>
+
+<button type="button" onclick="save()" >Save</button>
+<button type="button" onclick="display()" >Display</button>
+
+<script>
+var container = new Array();
+var data;
+
+function save(){
+  var a = document.getElementById("firstName").value;
+  var b = document.getElementById("lastName").value;
+  var c = document.getElementById("age").value;
+
+  data = new put(a,b,c);
+
+  dataBase(data);
+}
+
+function put(fName,lName,age){
+  this.firstName = fName;
+  this.lastName = lName;
+  this.age = age;
+
+}
+
+function display(){
+  document.getElementById("firstName").value = data.firstName;
+  document.getElementById("lastName").value = data.lastName;
+  document.getElementById("age").value = data.age;
+}
+
+function dataBase(value){
+  container[container.length -1] = value;
+}
+</script>
+
+</body>
+</html> 
+
