@@ -21,7 +21,7 @@ function preload() {
     game.load.image('sky', 'assets/black.png');
     game.load.image('ground', 'assets/platform.png');
     game.load.image('toads', 'assets/toad.png');
-    game.load.image('bullet', 'assets/missile.jpg');
+    game.load.image('bullet', 'assets/missile.png');
     game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
 
 }
@@ -64,9 +64,28 @@ function startStar(){
     
 
 }
+
+function gofull() {
+
+    if (game.scale.isFullScreen)
+    {
+        game.scale.stopFullScreen();
+    }
+    else
+    {
+        game.scale.startFullScreen(false);
+    }
+
+}    
+    
     
 function create() {
 
+    //FullScreen
+    game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
+    game.input.onDown.add(gofull, this);
+    
+    
     //  We're going to be using physics, so enable the Arcade Physics system
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
@@ -142,6 +161,7 @@ function update() {
 
     //  Collide the player and the stars with the platforms
     game.physics.arcade.collide(player, platforms);
+    game.physics.arcade.collide(bullet, platforms);
     game.physics.arcade.collide(toads, platforms);
     game.physics.arcade.overlap(bullet,toads,collectStar,null, this);
 
@@ -185,7 +205,7 @@ function update() {
     //  Allow the player to jump if they are touching the ground.
     if (cursors.up.isDown && player.body.touching.down)
     {
-        player.body.velocity.y = -200;
+        player.body.velocity.y = -350;
     }
 
 }
