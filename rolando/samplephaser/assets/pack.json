@@ -1,0 +1,52 @@
+{
+    "main": [
+        {
+            "type": "image",
+            "key": "tiles",
+            "url": "assets/images/nestle2.png"
+        },
+        {
+            "type": "spritesheet",
+            "key": "frog",
+            "url": "assets/sprites/frog.png",
+            "frameWidth": 79,
+            "frameHeight": 60
+        },
+        {
+            "type": "spritesheet",
+            "key": "toad",
+            "url": "assets/sprites/toad.png",
+            "frameWidth": 64,
+            "frameHeight": 64
+        },
+        {
+            "type": "spritesheet",
+            "key": "pencil",
+            "url": "assets/sprites/pencil.png",
+            "frameWidth": 32,
+            "frameHeight": 32
+        },
+        {
+            "type": "audio",
+            "key": "bgmusic1",
+            "urls": ["assets/audio/Ouroboros.mp3"]
+        },
+        {
+            "type": "audio",
+            "key": "jump",
+            "urls": ["assets/audio/146726__fins__jumping.mp3"]
+        },
+        {
+            "type": "audio",
+            "key": "thud",
+            "urls": ["assets/audio/215162__otisjames__thud.mp3"]
+        },
+        {
+            "type": "tilemap",
+            "key": "stage1",
+            "url": "assets/stage1.json",
+            "data": null,
+            "format": "TILED_JSON"
+        }
+    ]
+}
