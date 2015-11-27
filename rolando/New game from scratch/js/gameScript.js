@@ -9,6 +9,7 @@ function preload() {
     game.load.image('bullet', 'assets/missile.png');
     game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
     game.load.image('reset', 'assets/resetbutton.png');
+    game.load.image('screen', 'assets/FSButton.gif')
 
 }
 
@@ -27,8 +28,10 @@ var score = 0;
 var scoreText;
 var bulletCount = 0;
 var bulletcount;
+
     
-var button;
+var resetButton;
+var fullScreenButton;
 
 function startStar(){
     for (var i = 0; i < 12; i++)
@@ -62,18 +65,14 @@ function gofull() {
     }
     else
     {
-        game.scale.startFullScreen(false);
+        game.scale.startFullScreen();
     }
 
 }    
     
     
 function actionOnClick(){
-    score = 0;
-    scoreText.game.add.text("Score: " + score);
-    
-    bulletCount = 0;
-    bulletcount.game.add.text("Bullet Count: " + bulletCount);
+      location.reload();
 }    
     
     
@@ -81,7 +80,7 @@ function create() {
     
     //FullScreen
     game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
-    game.input.onDown.add(gofull, this);
+    //game.input.onDown.add(gofull, this);
     
     
     //  We're going to be using physics, so enable the Arcade Physics
@@ -158,10 +157,16 @@ function create() {
     
     
     //---------------------
-    button = game.add.button(50,550, 'reset', actionOnClick, this, 2,
-        1, 0);    
-    button.height = 40;
-    button.width = 40;
+    resetButton = game.add.button(50,550, 'reset', actionOnClick,
+        this, 2, 1, 0);    
+    resetButton.height = 40;
+    resetButton.width = 40;
+    
+    
+    fullScreenButton = game.add.button(150,550, 'screen' ,gofull,
+        this, 2, 1, 0);
+    fullScreenButton.height = 40;
+    fullScreenButton.width = 40;
     
     //-------------------------------
     spacebar = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
@@ -181,7 +186,7 @@ function update() {
 
     //  Checks to see if the player overlaps with any of the stars,
     //  if he does call the collectStar function
-    game.physics.arcade.overlap(player, toads, collectStar, null,
+    game.physics.arcade.overlap(player, toads, actionOnClick, null,
         this);
 
     //  Reset the players velocity (movement)
