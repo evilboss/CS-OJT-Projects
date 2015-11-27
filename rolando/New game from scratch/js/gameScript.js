@@ -146,9 +146,9 @@ function create() {
     //  The score
     
     //-------------------------------------------------
-    scoreText = game.add.text(16, 16, 'Score: 0', { fontSize: '32px',
+    scoreText = game.add.text(300, 550, 'Score: 0', { fontSize: '32px',
         fill: '#000' });
-    bulletcount = game.add.text(500, 16, 'Bullet Count: 0', { 
+    bulletcount = game.add.text(550, 550, 'Bullet Count: 0', { 
         fontSize: '32px', fill: '#000' });
 
     
