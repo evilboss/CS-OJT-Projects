@@ -1,0 +1,19 @@
+.bgimage{
+    background-image: url("../image/persona%203");
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+}
+
+.bgimage1{
+    background-image: url("../image/persona%203");
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+}
+.icon{
+    height: 125px;
+    width: 125px;
+    margin: 0 auto;
+    display: block;
+}
