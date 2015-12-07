@@ -6,14 +6,20 @@
 }
 
 .bgimage1{
-    background-image: url("../image/persona%203");
+    background-image: url("../image/persona4.jpg");
     background-position: center center;
     background-size: cover;
     height: 200px;
 }
 .icon{
-    height: 125px;
-    width: 125px;
+    margin-top: 0;
+    height: 200px;
+    width: 200px;
     margin: 0 auto;
     display: block;
 }
+
+p,h3{
+    text-align: center;
+}
+
