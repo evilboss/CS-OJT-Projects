@@ -1,0 +1,55 @@
+div{
+    display: block;
+}
+.bgimage{
+    background-image: url("../assets/Persona.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+}
+.header{
+    z-index: 1;
+	position: fixed;
+	width: 98.5%;
+	height: 20%;
+    background-color: transparent;
+    border-color: black;
+	margin-bottom: 10px;
+    clear: both;
+    border-radius: 10px;
+    border: 4px solid black;
+    clear: both;
+    margin-top: -.5%;
+}
+
+.left{
+    position: relative;
+	float: left;
+	width: 10%;
+	height: 60%;
+    background-color: #B9D7D9;
+    margin-top: 10.5%;
+}
+
+.right{
+    position: relative;
+	float: right;
+	width: 10%;
+	height: 60%;
+	background-color: #B9D7D9;
+    margin-top: 10.5%;
+}
+
+.footer{
+	position: relative;
+	height: 20%;
+    width: 100%;
+	background-color: transparent;
+	clear: both;
+    border: 4px solid black;
+    
+}
+
