@@ -4,6 +4,29 @@
 } 
 
 
+@media screen and (max-width: 575px) {
+    .header > h1{
+        font-size: 20px;
+    }
+    
+    .floatingText{
+        width: 100%;
+    }
+    
+    ul{
+        height: 15px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer > p {
+        font-size: 10px;
+    }
+    
+    
+}
+
 html,body{
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
@@ -38,7 +61,7 @@ h1{
 }
 
 .content{
-    background-color: #848482;
+    background-color: #7D6655;
     height: auto;
     width: 99.8%;
     color: #E5E4E2;
@@ -68,8 +91,6 @@ h1{
     height: 5%;
     width: 99.8%;
     background-color: #413839;
-    border: 3px solid gray;
-    border-radius: 5px;
     position: relative;
 }
 
